@@ -59,7 +59,8 @@ oc new-app --template=processserver63-mysql-persistent-s2i -p APPLICATION_NAME=$
 
 export policyquote_app=<URL of the policyquote app route>
 cd /Users/anuragsaran/Documents/MW/summit2017/bxms-advanced-infrastructure-lab/xpaas/process-server
-export policyquote_app=policyquote-app-brms-server-policyquote.apps.anuragsdemo.com
+export kieserver_password=kieserver1!
+export policyquote_app=policyquote-bpms-server-policyquote.apps.anuragsdemo.com
 export kieserver_password=kieserver1!
 curl -X GET -H "Accept: application/json" --user kieserver:$kieserver_password "$policyquote_app/kie-server/services/rest/server"
 curl -X GET -H "Accept: application/json" --user kieserver:$kieserver_password "$policyquote_app/kie-server/services/rest/server/containers"
