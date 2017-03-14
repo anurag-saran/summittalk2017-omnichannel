@@ -110,6 +110,7 @@ curl -X GET -H "Accept: application/json" --user kieserver:$kieserver_password "
 
 
 **********Git Hook**********
+https://access.redhat.com/documentation/en-us/red_hat_jboss_bpm_suite/6.4/html/administration_and_configuration_guide/chap_repository_hooks#configuring_git_hooks
 
 sh-4.2$ cat /opt/jboss/bpms/jboss-eap-6.4/bin/.niogit/Mortgages.git/config
 [core]
@@ -133,6 +134,11 @@ sh-4.2$ cat /opt/jboss/bpms/jboss-eap-6.4/bin/.niogit/Mortgages.git/hooks/post-c
 #!/bin/sh
 git push origin master
 sh-4.2$ 
+
+****** Another Approach *********
+system property for external git access: 
+org.uberfire.nio.git.ssh.daemon.host=192.168.x.x
+
 
 
 
